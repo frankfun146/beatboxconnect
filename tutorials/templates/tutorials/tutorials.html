@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <!-- Page Header -->
+    <header class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Beatbox Tutorials</h1>
+        <p class="lead">
+            Welcome to the BeatboxConnect tutorials section! Here, you can learn various beatbox sounds and techniques.
+            Explore sounds like bass, drums, liproll, zipper, and more. Have a suggestion? Reach out through our contact
+            page, and we’ll update our list soon!
+        </p>
+    </header>
+
+    <!-- Tutorial Categories Grid -->
+    <div class="row g-4">
+        <!-- Basic BTK Sounds -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header bg-primary text-white text-center">
+                    Basic BTK Sounds
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='kick_drum' %}">Kick Drum</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='hi_hat' %}">Hi-Hat</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='k_snare' %}">K-Snare</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Liproll -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header bg-secondary text-white text-center">
+                    Liproll
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='basic_liproll' %}">Basic Liproll</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='inward_liproll' %}">Inward Liproll</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='lip_bass' %}">Lip Bass</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Essential Snares -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header bg-info text-white text-center">
+                    Essential Snares
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='pf_snare' %}">PF Snare</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='spit_snare' %}">Spit Snare</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='inward_k_snare' %}">Inward K Snare</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='cough_snare' %}">Cough Snare</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='poh_snare' %}">Poh Snare</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Powerful Basses -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header bg-success text-white text-center">
+                    Powerful Basses
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='throat_bass' %}">Throat Bass</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='inward_bass' %}">Inward Bass</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='vibration_bass' %}">Vibration Bass</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='tongue_bass' %}">Tongue Bass</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Other Sounds -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header bg-dark text-white text-center">
+                    Other Sounds
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='zipper' %}">Zipper</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='inward_drag' %}">Inward Drag</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='click_roll' %}">Click Roll</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='trumpet' %}">Trumpet</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="stretched-link text-decoration-none"
+                            href="{% url 'tutorial_detail' sound_name='throat_kick' %}">Throat Kick</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div> <!-- End row -->
+</div> <!-- End container -->
+{% endblock %}

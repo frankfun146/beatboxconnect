@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-center">Upcoming Beatboxing Events</h1>
+
+{% if events %}
+<ul class="list-group">
+    {% for event in events %}
+    <li class="list-group-item">
+        <h3>{{ event.name }}</h3>
+        <p><strong>Location:</strong> {{ event.location }}</p>
+        <p><strong>Time:</strong> {{ event.time }}</p>
+        <p><strong>Free Entry:</strong> {% if event.free %} Yes {% else %} No {% endif %}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p class="text-center text-muted">There are no upcoming beatboxing events!</p>
+{% endif %}
+{% endblock %}

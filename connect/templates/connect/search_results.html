@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Search Results for "{{ query }}"</h1>
+    {% if questions %}
+    {% for question in questions %}
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Question:</h5>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">{{ question.title }}</h4>
+                    <p class="card-text">{{ question.content }}</p>
+                    <p class="text-muted">
+                        Asked by: <strong>{{ question.user.username }}</strong>
+                    </p>
+                    <a href="{% url 'answer_question' question.id %}" class="btn btn-outline-primary">
+                        Answer this question
+                    </a>
+                </div>
+                {% if question.answers.all %}
+                <div class="card-footer">
+                    <h6 class="mb-3">Answers:</h6>
+                    {% for answer in question.answers.all %}
+                    <div class="mb-3 p-3 border rounded">
+                        <p class="mb-1">{{ answer.content }}</p>
+                        <small class="text-muted">
+                            Answered by: <strong>{{ answer.user.username }}</strong>
+                        </small>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <div class="alert alert-warning" role="alert">
+        No results found for "{{ query }}". Please try a different search term.
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
