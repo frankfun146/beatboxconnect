@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure--ud9u^@hp49%h#!eq=1$7j+f5=w1dj=)oe9o*bcm&mu@u3gcir
 DEBUG = False
 
 ALLOWED_HOSTS = ['www.beatboxconnect.com',
-                 'beatboxconnect.com', 'BeatboxConnect.com']
+                 'beatboxconnect.com', 'BeatboxConnect.com', 'beatboxconnect-f1pw.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
