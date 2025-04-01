@@ -1,28 +1,50 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container mt-5">
-    <!-- Website Explanation Section -->
-    <div class="text-center mb-5">
-        <h1 class="display-4 fw-bold">Welcome to BeatboxConnect!</h1>
-        <p class="lead text-muted mb-4">
-            BeatboxConnect aims to bring together beatboxers across the USA. Whether you're just starting out or you're
-            a seasoned pro, this is the place to learn, connect, and grow with others who share your passion for
-            beatboxing.
+<div class="container my-5">
+    <!-- Hero Section -->
+    <section class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Welcome to BeatboxConnect</h1>
+        <p class="lead text-muted">
+            Connecting beatboxers across the USA – from beginners to seasoned pros. Discover tutorials, join engaging
+            discussions,
+            and stay up-to-date on the latest events.
         </p>
-        <p class="text-muted mb-4">
-            Learn how to beatbox, ask questions, upload videos, join events, and much more!
+        <p class="text-muted">
+            Learn new techniques, ask questions, share your videos, and explore upcoming events that celebrate the art
+            of beatboxing.
         </p>
+    </section>
+
+    <!-- Call-to-Action Buttons -->
+    <div class="d-flex justify-content-center gap-3 mb-5">
+        <a href="{% url 'tutorials' %}" class="btn btn-dark btn-lg rounded-pill px-5 py-3 shadow">
+            Tutorials
+        </a>
+        <a href="{% url 'connect_home' %}" class="btn btn-dark btn-lg rounded-pill px-5 py-3 shadow">
+            Connect
+        </a>
     </div>
 
-    <!-- Buttons Section -->
-    <div class="d-flex justify-content-center gap-3">
-        <a href="{% url 'tutorials' %}"
-            class="btn btn-lg btn-dark rounded-pill px-5 py-3 shadow-lg text-white">Tutorials</a>
-        <a href="{% url 'connect_home' %}"
-            class="btn btn-lg btn-dark rounded-pill px-5 py-3 shadow-lg text-white">Connect</a>
-    </div>
-
-    <!-- Optional: Additional content can go here, like featured tutorials or events -->
+    <!-- About Section -->
+    <section class="bg-light p-4 rounded shadow-sm">
+        <h2 class="h4 mb-3">About Me</h2>
+        <p>
+            Hi, I'm Frank – a college student from California and a passionate beatboxer. Like many, I’ve found it
+            challenging to connect with fellow beatboxers in the U.S.
+            Inspired by the saying "be the change you want to see," I created BeatboxConnect to unite our community.
+            Here, you can:
+        </p>
+        <ul>
+            <li>Explore tutorials featuring popular beatboxing sounds.</li>
+            <li>Stay informed about upcoming beatboxing events across the country.</li>
+            <li>Engage in discussions and share your passion with others.</li>
+        </ul>
+        <p>
+            Although I currently manage the site on my own, I’m committed to enhancing it over time. If you’d like to
+            collaborate, hang out, or even jam together, please
+            reach out via our contact form. I look forward to connecting with you!
+        </p>
+    </section>
 </div>
 {% endblock %}
