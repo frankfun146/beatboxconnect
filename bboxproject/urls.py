@@ -18,14 +18,19 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from .sitemaps import PostSitemap
+from django.contrib.sitemaps.views import sitemap
 
-
+sitemaps = {
+    'posts': PostSitemap,  # Connect PostSitemap to the 'posts' URL in the sitemap
+}
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('tutorials/', include('tutorials.urls')),
     path('events/', include('events.urls')),
     path('connect/', include('connect.urls')),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
 
 
 ]
